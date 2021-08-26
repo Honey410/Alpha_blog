@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
 
         #for saving in DB(Articles table)
         @article = Article.new(article_params)
+        @article.user = User.first
         #@article.save
          #redirect_to article_path(@article)
         #redirect_to @article  #shorthend 
